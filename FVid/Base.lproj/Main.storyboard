@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UFm-pb-k1m">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="TYB-Ul-4uL">
+            <objects>
+                <navigationController id="UFm-pb-k1m" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VeB-vS-7qE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RAN-cp-SwZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fWt-xj-yrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-532" y="74"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tkn-aU-i2o">
+                                <rect key="frame" x="16" y="233" width="347" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-jv-7Vx">
+                                        <rect key="frame" x="20" y="112" width="307" height="56"/>
+                                        <color key="backgroundColor" red="0.49102909482758622" green="0.25982888442758612" blue="0.93960129310344831" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="O6Q-fL-9G0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Video">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.corderRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="userPressedVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QbX-am-yzJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="712-ui-69Y">
+                                        <rect key="frame" x="20" y="34" width="307" height="56"/>
+                                        <color key="backgroundColor" red="0.49102909482758622" green="0.25982888442758612" blue="0.93960129310344831" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="2NC-3W-Y4d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="GIF">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.corderRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="userPressedGIF:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xmL-RA-mfr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="712-ui-69Y" firstAttribute="leading" secondItem="Tkn-aU-i2o" secondAttribute="leading" constant="20" id="2SJ-vB-ZDf"/>
+                                    <constraint firstItem="zpH-jv-7Vx" firstAttribute="leading" secondItem="Tkn-aU-i2o" secondAttribute="leading" constant="20" id="5mw-J3-i85"/>
+                                    <constraint firstAttribute="trailing" secondItem="zpH-jv-7Vx" secondAttribute="trailing" constant="20" id="R5s-yl-Uy1"/>
+                                    <constraint firstAttribute="trailing" secondItem="712-ui-69Y" secondAttribute="trailing" constant="20" id="Uxy-UU-mCv"/>
+                                    <constraint firstItem="712-ui-69Y" firstAttribute="top" secondItem="Tkn-aU-i2o" secondAttribute="top" constant="34" id="d0T-oT-Yhl"/>
+                                    <constraint firstItem="zpH-jv-7Vx" firstAttribute="top" secondItem="712-ui-69Y" secondAttribute="bottom" constant="22" id="nsF-aQ-NkG"/>
+                                    <constraint firstAttribute="height" constant="200" id="rGS-xS-fwo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="Tkn-aU-i2o" secondAttribute="leading" id="7fw-zz-1c4"/>
+                            <constraint firstItem="Tkn-aU-i2o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="avb-Cf-KBt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tkn-aU-i2o" secondAttribute="trailing" constant="-4" id="wm8-uG-vQm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EZ2-Uk-0hw"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="74"/>
+        </scene>
+    </scenes>
+</document>
